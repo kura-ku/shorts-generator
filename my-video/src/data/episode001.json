@@ -30,7 +30,7 @@
     "scenes": [
       {
         "scene": 1,
-        "durationSeconds": 8,
+        "durationSeconds": 3,
         "animation": "think",
         "narration": "Many smart people stay broke forever.",
         "visual": {

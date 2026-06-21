@@ -1,35 +1,43 @@
 import {
   AbsoluteFill,
-  Audio,
+  Html5Audio ,
   interpolate,
   useCurrentFrame,
+  staticFile,
 } from "remotion";
 
 import script from "./data/episode001.json";
 import { NeoTony } from "./NeoTony";
 import { SceneProps } from "./Props";
 import { Background } from "./Background";
+import { Subtitle } from "./Subtitle";
 
 export const MyComposition = () => {
   const frame = useCurrentFrame();
 
-  let scene = script.video.scenes[0];
-  let sceneStart = 0;
+const fps = 30;
 
-  if (frame >= 240 && frame < 510) {
-    scene = script.video.scenes[1];
-    sceneStart = 240;
-  }
+const sceneDurations = script.video.scenes.map(
+(s) => s.durationSeconds * fps
+);
 
-  if (frame >= 510 && frame < 780) {
-    scene = script.video.scenes[2];
-    sceneStart = 510;
-  }
+let currentSceneIndex = 0;
+let sceneStart = 0;
 
-  if (frame >= 780) {
-    scene = script.video.scenes[3];
-    sceneStart = 780;
-  }
+for (let i = 0; i < sceneDurations.length; i++) {
+const end = sceneStart + sceneDurations[i];
+
+if (frame < end) {
+currentSceneIndex = i;
+break;
+}
+
+sceneStart = end;
+}
+
+const scene =
+script.video.scenes[currentSceneIndex];
+
 
   const sceneFrame = frame - sceneStart;
 
@@ -37,16 +45,6 @@ export const MyComposition = () => {
     sceneFrame,
     [0, 120],
     [1, 1.08],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-    }
-  );
-
-  const textScale = interpolate(
-    sceneFrame,
-    [0, 20],
-    [0.5, 1],
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
@@ -61,7 +59,9 @@ export const MyComposition = () => {
         overflow: "hidden",
       }}
     >
-      <Audio src="/audio/episode001.mp3" />
+      <Html5Audio
+        src={staticFile("audio/episode001.mp3")}
+      />
 
       <Background
         background={scene.visual.background}
@@ -95,22 +95,8 @@ export const MyComposition = () => {
         frame={sceneFrame}
       />
 
-      <div
-        style={{
-          position: "absolute",
-          bottom: 180,
-          width: "85%",
-          textAlign: "center",
-          fontSize: 42,
-          fontWeight: 600,
-          lineHeight: 1.4,
-          zIndex: 20,
-          transform: `scale(${textScale})`,
-        }}
-      >
-        {scene.narration}
-      </div>
-
+      <Subtitle text={scene.narration} />
+      
       <div
         style={{
           position: "absolute",
