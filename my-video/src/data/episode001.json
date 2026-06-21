@@ -14,16 +14,19 @@
     "lessonType": "Mindset",
     "status": "draft"
   },
-
+  "audio": {
+    "file": "episode001.mp3",
+    "voice": "en-US-GuyNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz"
+  },
   "video": {
     "title": "Why Smart People Stay Broke",
     "durationSeconds": 35,
-
     "mainCharacter": {
       "id": "neo-tony",
       "name": "Neo Tony"
     },
-
     "scenes": [
       {
         "scene": 1,
@@ -70,10 +73,8 @@
         }
       }
     ],
-
     "takeaway": "Knowledge helps. Assets create freedom."
   },
-
   "analytics": {
     "platform": "youtube",
     "views": 0,

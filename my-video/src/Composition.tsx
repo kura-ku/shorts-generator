@@ -1,5 +1,6 @@
 import {
   AbsoluteFill,
+  Audio,
   interpolate,
   useCurrentFrame,
 } from "remotion";
@@ -60,6 +61,8 @@ export const MyComposition = () => {
         overflow: "hidden",
       }}
     >
+      <Audio src="/audio/episode001.mp3" />
+
       <Background
         background={scene.visual.background}
       />
@@ -67,12 +70,12 @@ export const MyComposition = () => {
       <div
         style={{
           position: "absolute",
-          top: 80,
+          top: 70,
           width: "90%",
           textAlign: "center",
           fontSize: 70,
           fontWeight: "bold",
-          zIndex: 10,
+          zIndex: 20,
         }}
       >
         {script.metadata.topic}
@@ -81,7 +84,7 @@ export const MyComposition = () => {
       <div
         style={{
           transform: `scale(${zoom})`,
-          zIndex: 5,
+          zIndex: 10,
         }}
       >
         <NeoTony animation={scene.animation} />
@@ -95,13 +98,13 @@ export const MyComposition = () => {
       <div
         style={{
           position: "absolute",
-          bottom: 220,
+          bottom: 180,
           width: "85%",
           textAlign: "center",
           fontSize: 42,
           fontWeight: 600,
           lineHeight: 1.4,
-          zIndex: 10,
+          zIndex: 20,
           transform: `scale(${textScale})`,
         }}
       >
@@ -111,9 +114,10 @@ export const MyComposition = () => {
       <div
         style={{
           position: "absolute",
-          bottom: 80,
+          bottom: 60,
           fontSize: 28,
           opacity: 0.5,
+          zIndex: 20,
         }}
       >
         Scene {scene.scene} / 4
