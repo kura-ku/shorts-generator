@@ -1,17 +1,22 @@
 import { Composition } from "remotion";
 import { MyComposition } from "./Composition";
+import script from "./data/current.json";
 
-export const RemotionRoot: React.FC = () => {
-  return (
-    <>
-      <Composition
-        id="MyComp"
-        component={MyComposition}
-        durationInFrames={1050}
-        fps={30}
-        width={1080}
-        height={1920}
-      />
-    </>
-  );
+const fps = 30;
+
+const durationInFrames = script.video.scenes.reduce(
+(total, scene) => total + scene.durationSeconds * fps,
+0
+);
+
+export const RemotionRoot = () => {
+return ( <Composition
+   id="MyComp"
+   component={MyComposition}
+   durationInFrames={durationInFrames}
+   fps={fps}
+   width={1080}
+   height={1920}
+ />
+);
 };

@@ -6,7 +6,7 @@ import {
   staticFile,
 } from "remotion";
 
-import script from "./data/episode001.json";
+import script from "./data/current.json";
 import { NeoTony } from "./NeoTony";
 import { SceneProps } from "./Props";
 import { Background } from "./Background";
@@ -60,7 +60,7 @@ script.video.scenes[currentSceneIndex];
       }}
     >
       <Html5Audio
-        src={staticFile("audio/episode001.mp3")}
+        src={staticFile(`audio/${script.audio.file}`)}
       />
 
       <Background
@@ -106,7 +106,7 @@ script.video.scenes[currentSceneIndex];
           zIndex: 20,
         }}
       >
-        Scene {scene.scene} / 4
+        Scene {scene.scene} / {script.video.scenes.length}
       </div>
     </AbsoluteFill>
   );

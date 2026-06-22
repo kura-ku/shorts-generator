@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "videoId": "20260621-001",
+    "createdAt": "2026-06-21",
+    "category": "Money",
+    "angle": "Rich vs Poor",
+    "topic": "Why Smart People Stay Broke",
+    "targetAudience": "English-speaking viewers",
+    "contentType": "YouTube Shorts",
+    "character": "Neo Tony",
+    "estimatedDurationSeconds": 35,
+    "primaryEmotion": "Curiosity",
+    "hookType": "Comparison",
+    "lessonType": "Mindset",
+    "status": "draft"
+  },
+  "audio": {
+    "file": "episode001.mp3",
+    "voice": "en-US-GuyNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz"
+  },
+  "video": {
+    "title": "Why Smart People Stay Broke",
+    "durationSeconds": 35,
+    "mainCharacter": {
+      "id": "neo-tony",
+      "name": "Neo Tony"
+    },
+    "scenes": [
+      {
+        "scene": 1,
+        "durationSeconds": 3,
+        "animation": "think",
+        "narration": "Many smart people stay broke forever.",
+        "visual": {
+          "character": "neo-tony",
+          "props": ["books"],
+          "background": "office"
+        }
+      },
+      {
+        "scene": 2,
+        "durationSeconds": 9,
+        "animation": "talk",
+        "narration": "They spend years collecting knowledge but never build assets.",
+        "visual": {
+          "character": "neo-tony",
+          "props": ["books", "certificate"],
+          "background": "study"
+        }
+      },
+      {
+        "scene": 3,
+        "durationSeconds": 9,
+        "animation": "point",
+        "narration": "Wealthy people focus on assets that grow over time.",
+        "visual": {
+          "character": "neo-tony",
+          "props": ["growth-chart"],
+          "background": "chart"
+        }
+      },
+      {
+        "scene": 4,
+        "durationSeconds": 9,
+        "animation": "walk",
+        "narration": "Learn skills, but also build something that works for you.",
+        "visual": {
+          "character": "neo-tony",
+          "props": ["growth-chart"],
+          "background": "success"
+        }
+      }
+    ],
+    "takeaway": "Knowledge helps. Assets create freedom."
+  },
+  "analytics": {
+    "platform": "youtube",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "subscribersGained": 0
+  }
+}
