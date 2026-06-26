@@ -35,7 +35,9 @@
         "narration": "Many smart people stay broke forever.",
         "visual": {
           "character": "neo-tony",
-          "props": ["books"],
+          "props": [
+            "books"
+          ],
           "background": "office"
         }
       },
@@ -46,7 +48,10 @@
         "narration": "They spend years collecting knowledge but never build assets.",
         "visual": {
           "character": "neo-tony",
-          "props": ["books", "certificate"],
+          "props": [
+            "books",
+            "certificate"
+          ],
           "background": "study"
         }
       },
@@ -57,7 +62,9 @@
         "narration": "Wealthy people focus on assets that grow over time.",
         "visual": {
           "character": "neo-tony",
-          "props": ["growth-chart"],
+          "props": [
+            "growth-chart"
+          ],
           "background": "chart"
         }
       },
@@ -68,7 +75,9 @@
         "narration": "Learn skills, but also build something that works for you.",
         "visual": {
           "character": "neo-tony",
-          "props": ["growth-chart"],
+          "props": [
+            "growth-chart"
+          ],
           "background": "success"
         }
       }

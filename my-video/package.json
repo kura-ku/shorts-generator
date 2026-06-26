@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "build-video": "node build-video.js",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   }

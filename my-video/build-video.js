@@ -1,51 +1,27 @@
-const fs = require("fs");
-const { execSync } = require("child_process");
+const logger = require("./lib/logger");
+
+const generateAudio = require("./lib/generate-audio");
+const updateCurrent = require("./lib/update-current");
+const renderVideo = require("./lib/render-video");
+const validateScript = require("./lib/validate-script");
 
 const episode = process.argv[2];
 
 if (!episode) {
-console.error(
-"Usage: node build-video.js episode002"
-);
+console.error("Usage: npm run build-video -- episode001");
 process.exit(1);
 }
 
-const jsonPath = `src/data/${episode}.json`;
+const script = require(`./episodes/${episode}.json`);
 
-if (!fs.existsSync(jsonPath)) {
-console.error(`Missing: ${jsonPath}`);
-process.exit(1);
-}
+logger.log("Build", `Building ${episode}`);
 
-const script = JSON.parse(
-fs.readFileSync(jsonPath, "utf8")
-);
+validateScript(script);
 
-const narration = script.video.scenes
-.map((s) => s.narration)
-.join(" ");
+generateAudio(script, episode);
 
-const mp3File = `${episode}.mp3`;
+updateCurrent(script, episode);
 
-console.log("Generating audio...");
+renderVideo(episode);
 
-execSync(
-`edge-tts -t "${narration.replace(/"/g, "")}" -v en-US-GuyNeural --write-media public/audio/${mp3File}`,
-{ stdio: "inherit" }
-);
-
-console.log("Updating current.json...");
-
-fs.copyFileSync(
-jsonPath,
-"src/data/current.json"
-);
-
-console.log("Rendering video...");
-
-execSync(
-`npx remotion render MyComp out/${episode}.mp4`,
-{ stdio: "inherit" }
-);
-
-console.log(`Done: out/${episode}.mp4`);
+logger.success("Video completed");
