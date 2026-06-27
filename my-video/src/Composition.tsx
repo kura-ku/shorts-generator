@@ -10,7 +10,7 @@ import script from "./data/current.json";
 import { NeoTony } from "./NeoTony";
 import { SceneProps } from "./Props";
 import { Background } from "./Background";
-import { Subtitle } from "./Subtitle";
+import { Subtitle } from "./subtitle/Subtitle";
 
 export const MyComposition = () => {
   const frame = useCurrentFrame();
