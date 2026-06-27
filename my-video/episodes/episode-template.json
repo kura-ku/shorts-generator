@@ -1,9 +1,15 @@
 {
   "metadata": {
-    "title": "",
+    "videoId": "",
+    "createdAt": "",
+    "status": "draft"
+  },
+
+  "content": {
     "topic": "",
+    "title": "",
     "description": "",
-    "tags": [
+    "hashtags": [
       "motivation",
       "mindset",
       "success"
@@ -23,71 +29,16 @@
     "height": 1920,
 
     "scenes": [
-
       {
         "scene": 1,
-
         "durationSeconds": 4,
-
         "narration": "",
-
         "animation": "talk",
-
         "visual": {
           "background": "office",
-
-          "props": []
-        }
-      },
-
-      {
-        "scene": 2,
-
-        "durationSeconds": 4,
-
-        "narration": "",
-
-        "animation": "explain",
-
-        "visual": {
-          "background": "city",
-
-          "props": []
-        }
-      },
-
-      {
-        "scene": 3,
-
-        "durationSeconds": 4,
-
-        "narration": "",
-
-        "animation": "think",
-
-        "visual": {
-          "background": "room",
-
-          "props": []
-        }
-      },
-
-      {
-        "scene": 4,
-
-        "durationSeconds": 4,
-
-        "narration": "",
-
-        "animation": "point",
-
-        "visual": {
-          "background": "studio",
-
           "props": []
         }
       }
-
     ]
   }
 }
