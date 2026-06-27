@@ -1,95 +1,77 @@
 {
   "metadata": {
-    "videoId": "20260621-001",
-    "createdAt": "2026-06-21",
-    "category": "Money",
-    "angle": "Rich vs Poor",
-    "topic": "Why Smart People Stay Broke",
-    "targetAudience": "English-speaking viewers",
-    "contentType": "YouTube Shorts",
-    "character": "Neo Tony",
-    "estimatedDurationSeconds": 35,
-    "primaryEmotion": "Curiosity",
-    "hookType": "Comparison",
-    "lessonType": "Mindset",
+    "videoId": "",
+    "createdAt": "",
     "status": "draft"
   },
+  "content": {
+    "topic": "Busy Women Productivity",
+    "title": "Stop Wasting Two Hours Every Day",
+    "description": "Neo Tony shares four simple productivity habits that help busy women save time, reduce stress, and get more done without working longer.",
+    "hashtags": [
+      "productivity",
+      "busywomen",
+      "timemanagement",
+      "worksmarter",
+      "lifestyle",
+      "ai"
+    ]
+  },
   "audio": {
-    "file": "episode001.mp3",
-    "voice": "en-US-GuyNeural",
+    "voice": "en-US-AndrewMultilingualNeural",
     "rate": "+0%",
-    "pitch": "+0Hz"
+    "pitch": "+0Hz",
+    "file": "episode20260601.mp3"
   },
   "video": {
-    "title": "Why Smart People Stay Broke",
-    "durationSeconds": 35,
-    "mainCharacter": {
-      "id": "neo-tony",
-      "name": "Neo Tony"
-    },
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
     "scenes": [
       {
         "scene": 1,
-        "durationSeconds": 3,
-        "animation": "think",
-        "narration": "Many smart people stay broke forever.",
+        "durationSeconds": 8,
+        "narration": "Busy all day but nothing gets finished? You're probably losing two hours daily without even noticing. Let's fix that today.",
+        "animation": "talk",
         "visual": {
-          "character": "neo-tony",
+          "background": "office",
           "props": [
-            "books"
-          ],
-          "background": "office"
+            "phone"
+          ]
         }
       },
       {
         "scene": 2,
-        "durationSeconds": 9,
-        "animation": "talk",
-        "narration": "They spend years collecting knowledge but never build assets.",
+        "durationSeconds": 8,
+        "narration": "Stop switching between tasks every few minutes. Finish one important task first, then move to the next with full focus.",
+        "animation": "explain",
         "visual": {
-          "character": "neo-tony",
-          "props": [
-            "books",
-            "certificate"
-          ],
-          "background": "study"
+          "background": "office",
+          "props": []
         }
       },
       {
         "scene": 3,
-        "durationSeconds": 9,
-        "animation": "point",
-        "narration": "Wealthy people focus on assets that grow over time.",
+        "durationSeconds": 7,
+        "narration": "Use simple AI tools to organize emails, summarize notes, and plan tomorrow. Work smarter instead of staying busy all day.",
+        "animation": "think",
         "visual": {
-          "character": "neo-tony",
+          "background": "room",
           "props": [
-            "growth-chart"
-          ],
-          "background": "chart"
+            "phone"
+          ]
         }
       },
       {
         "scene": 4,
-        "durationSeconds": 9,
-        "animation": "walk",
-        "narration": "Learn skills, but also build something that works for you.",
+        "durationSeconds": 7,
+        "narration": "Small habits create huge results. Follow Neo Tony for more practical productivity tips that give you back your valuable time.",
+        "animation": "point",
         "visual": {
-          "character": "neo-tony",
-          "props": [
-            "growth-chart"
-          ],
-          "background": "success"
+          "background": "studio",
+          "props": []
         }
       }
-    ],
-    "takeaway": "Knowledge helps. Assets create freedom."
-  },
-  "analytics": {
-    "platform": "youtube",
-    "views": 0,
-    "likes": 0,
-    "comments": 0,
-    "shares": 0,
-    "subscribersGained": 0
+    ]
   }
 }

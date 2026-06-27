@@ -1,5 +1,8 @@
 const logger = require("./lib/logger");
 
+const updateCurrentSubtitles =
+require("./lib/update-current-subtitles");
+
 const generateAudio = require("./lib/generate-audio");
 const generateSubtitles = require("./lib/generate-subtitles");
 
@@ -23,6 +26,8 @@ validateScript(script);
 generateAudio(script, episode);
 
 generateSubtitles(episode);
+
+updateCurrentSubtitles(episode);
 
 updateCurrent(script, episode);
 

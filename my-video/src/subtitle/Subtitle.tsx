@@ -1,11 +1,9 @@
-import React from "react";
-
 import {
   AbsoluteFill,
   useCurrentFrame,
 } from "remotion";
 
-import subtitles from "../../public/subtitles/episode001.json";
+import subtitles from "../../public/subtitles/current.json";
 
 import { SubtitleStyle } from "./SubtitleStyle";
 

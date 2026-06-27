@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "videoId": "",
+    "createdAt": "",
+    "status": "draft"
+  },
+
+  "content": {
+    "topic": "Busy Women Productivity",
+    "title": "Stop Wasting Two Hours Every Day",
+    "description": "Neo Tony shares four simple productivity habits that help busy women save time, reduce stress, and get more done without working longer.",
+    "hashtags": [
+      "productivity",
+      "busywomen",
+      "timemanagement",
+      "worksmarter",
+      "lifestyle",
+      "ai"
+    ]
+  },
+
+  "audio": {
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz",
+    "file": "episode20260601.mp3"
+  },
+
+  "video": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+
+    "scenes": [
+      {
+        "scene": 1,
+        "durationSeconds": 8,
+        "narration": "Busy all day but nothing gets finished? You're probably losing two hours daily without even noticing. Let's fix that today.",
+        "animation": "talk",
+        "visual": {
+          "background": "office",
+          "props": [
+            "phone"
+          ]
+        }
+      },
+
+      {
+        "scene": 2,
+        "durationSeconds": 8,
+        "narration": "Stop switching between tasks every few minutes. Finish one important task first, then move to the next with full focus.",
+        "animation": "explain",
+        "visual": {
+          "background": "office",
+          "props": []
+        }
+      },
+
+      {
+        "scene": 3,
+        "durationSeconds": 7,
+        "narration": "Use simple AI tools to organize emails, summarize notes, and plan tomorrow. Work smarter instead of staying busy all day.",
+        "animation": "think",
+        "visual": {
+          "background": "room",
+          "props": [
+            "phone"
+          ]
+        }
+      },
+
+      {
+        "scene": 4,
+        "durationSeconds": 7,
+        "narration": "Small habits create huge results. Follow Neo Tony for more practical productivity tips that give you back your valuable time.",
+        "animation": "point",
+        "visual": {
+          "background": "studio",
+          "props": []
+        }
+      }
+    ]
+  }
+}

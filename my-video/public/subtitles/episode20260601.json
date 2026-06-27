@@ -1,0 +1,402 @@
+[
+  {
+    "word": "busy",
+    "start": 0.0,
+    "end": 0.3
+  },
+  {
+    "word": "all",
+    "start": 0.3,
+    "end": 0.56
+  },
+  {
+    "word": "day",
+    "start": 0.56,
+    "end": 0.86
+  },
+  {
+    "word": "but",
+    "start": 0.86,
+    "end": 1.38
+  },
+  {
+    "word": "nothing",
+    "start": 1.38,
+    "end": 1.7
+  },
+  {
+    "word": "gets",
+    "start": 1.7,
+    "end": 1.92
+  },
+  {
+    "word": "finished?",
+    "start": 1.92,
+    "end": 2.28
+  },
+  {
+    "word": "You're",
+    "start": 2.8,
+    "end": 2.94
+  },
+  {
+    "word": "probably",
+    "start": 2.94,
+    "end": 3.3
+  },
+  {
+    "word": "losing",
+    "start": 3.3,
+    "end": 3.78
+  },
+  {
+    "word": "two",
+    "start": 3.78,
+    "end": 4.34
+  },
+  {
+    "word": "hours",
+    "start": 4.34,
+    "end": 4.94
+  },
+  {
+    "word": "daily",
+    "start": 4.94,
+    "end": 5.34
+  },
+  {
+    "word": "without",
+    "start": 5.34,
+    "end": 5.88
+  },
+  {
+    "word": "even",
+    "start": 5.88,
+    "end": 6.14
+  },
+  {
+    "word": "noticing.",
+    "start": 6.14,
+    "end": 6.48
+  },
+  {
+    "word": "Let's",
+    "start": 7.06,
+    "end": 7.22
+  },
+  {
+    "word": "fix",
+    "start": 7.22,
+    "end": 7.36
+  },
+  {
+    "word": "that",
+    "start": 7.36,
+    "end": 7.56
+  },
+  {
+    "word": "today.",
+    "start": 7.56,
+    "end": 7.84
+  },
+  {
+    "word": "Stop",
+    "start": 8.36,
+    "end": 8.52
+  },
+  {
+    "word": "switching",
+    "start": 8.52,
+    "end": 8.88
+  },
+  {
+    "word": "between",
+    "start": 8.88,
+    "end": 9.14
+  },
+  {
+    "word": "tasks",
+    "start": 9.14,
+    "end": 9.7
+  },
+  {
+    "word": "every",
+    "start": 9.7,
+    "end": 10.24
+  },
+  {
+    "word": "few",
+    "start": 10.24,
+    "end": 10.48
+  },
+  {
+    "word": "minutes.",
+    "start": 10.48,
+    "end": 10.76
+  },
+  {
+    "word": "Finish",
+    "start": 11.34,
+    "end": 11.72
+  },
+  {
+    "word": "one",
+    "start": 11.72,
+    "end": 12.0
+  },
+  {
+    "word": "important",
+    "start": 12.0,
+    "end": 12.34
+  },
+  {
+    "word": "task",
+    "start": 12.34,
+    "end": 12.7
+  },
+  {
+    "word": "first,",
+    "start": 12.7,
+    "end": 13.12
+  },
+  {
+    "word": "then",
+    "start": 13.42,
+    "end": 13.74
+  },
+  {
+    "word": "move",
+    "start": 13.74,
+    "end": 13.96
+  },
+  {
+    "word": "to",
+    "start": 13.96,
+    "end": 14.12
+  },
+  {
+    "word": "the",
+    "start": 14.12,
+    "end": 14.2
+  },
+  {
+    "word": "next",
+    "start": 14.2,
+    "end": 14.48
+  },
+  {
+    "word": "with",
+    "start": 14.48,
+    "end": 14.66
+  },
+  {
+    "word": "full",
+    "start": 14.66,
+    "end": 15.1
+  },
+  {
+    "word": "focus.",
+    "start": 15.1,
+    "end": 15.6
+  },
+  {
+    "word": "Use",
+    "start": 16.24,
+    "end": 16.42
+  },
+  {
+    "word": "simple",
+    "start": 16.42,
+    "end": 16.74
+  },
+  {
+    "word": "AI",
+    "start": 16.74,
+    "end": 17.02
+  },
+  {
+    "word": "tools",
+    "start": 17.02,
+    "end": 17.54
+  },
+  {
+    "word": "to",
+    "start": 17.54,
+    "end": 17.78
+  },
+  {
+    "word": "organize",
+    "start": 17.78,
+    "end": 18.16
+  },
+  {
+    "word": "emails,",
+    "start": 18.16,
+    "end": 18.7
+  },
+  {
+    "word": "summarize",
+    "start": 19.32,
+    "end": 19.56
+  },
+  {
+    "word": "notes,",
+    "start": 19.56,
+    "end": 20.12
+  },
+  {
+    "word": "and",
+    "start": 20.58,
+    "end": 20.66
+  },
+  {
+    "word": "plan",
+    "start": 20.66,
+    "end": 20.94
+  },
+  {
+    "word": "tomorrow.",
+    "start": 20.94,
+    "end": 21.38
+  },
+  {
+    "word": "Work",
+    "start": 21.9,
+    "end": 22.06
+  },
+  {
+    "word": "smarter",
+    "start": 22.06,
+    "end": 22.54
+  },
+  {
+    "word": "instead",
+    "start": 22.54,
+    "end": 22.94
+  },
+  {
+    "word": "of",
+    "start": 22.94,
+    "end": 23.12
+  },
+  {
+    "word": "staying",
+    "start": 23.12,
+    "end": 23.36
+  },
+  {
+    "word": "busy",
+    "start": 23.36,
+    "end": 23.64
+  },
+  {
+    "word": "all",
+    "start": 23.64,
+    "end": 23.86
+  },
+  {
+    "word": "day.",
+    "start": 23.86,
+    "end": 24.14
+  },
+  {
+    "word": "Small",
+    "start": 24.14,
+    "end": 24.94
+  },
+  {
+    "word": "habits",
+    "start": 24.94,
+    "end": 25.38
+  },
+  {
+    "word": "create",
+    "start": 25.38,
+    "end": 25.76
+  },
+  {
+    "word": "huge",
+    "start": 25.76,
+    "end": 26.22
+  },
+  {
+    "word": "results.",
+    "start": 26.22,
+    "end": 26.8
+  },
+  {
+    "word": "Follow",
+    "start": 27.32,
+    "end": 27.7
+  },
+  {
+    "word": "Neo",
+    "start": 27.7,
+    "end": 27.96
+  },
+  {
+    "word": "Tony",
+    "start": 27.96,
+    "end": 28.34
+  },
+  {
+    "word": "for",
+    "start": 28.34,
+    "end": 28.98
+  },
+  {
+    "word": "more",
+    "start": 28.98,
+    "end": 29.3
+  },
+  {
+    "word": "practical",
+    "start": 29.3,
+    "end": 29.76
+  },
+  {
+    "word": "productivity",
+    "start": 29.76,
+    "end": 30.28
+  },
+  {
+    "word": "tips",
+    "start": 30.28,
+    "end": 30.74
+  },
+  {
+    "word": "that",
+    "start": 30.74,
+    "end": 31.24
+  },
+  {
+    "word": "give",
+    "start": 31.24,
+    "end": 31.4
+  },
+  {
+    "word": "you",
+    "start": 31.4,
+    "end": 31.5
+  },
+  {
+    "word": "back",
+    "start": 31.5,
+    "end": 31.84
+  },
+  {
+    "word": "your",
+    "start": 31.84,
+    "end": 32.08
+  },
+  {
+    "word": "valuable",
+    "start": 32.08,
+    "end": 32.44
+  },
+  {
+    "word": "time.",
+    "start": 32.44,
+    "end": 32.82
+  }
+]

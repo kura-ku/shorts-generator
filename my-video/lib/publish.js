@@ -26,6 +26,15 @@ fs.mkdirSync(
 );
 
 // --------------------
+// Tags (互換対応)
+// --------------------
+
+const hashtags =
+  script.content.hashtags ??
+  script.content.tags ??
+  [];
+
+// --------------------
 // Video
 // --------------------
 
@@ -65,7 +74,7 @@ fs.writeFileSync(
 const description =
 `${script.content.description}
 
-${script.content.hashtags
+${hashtags
   .map(tag => "#" + tag)
   .join(" ")}`;
 
@@ -86,7 +95,7 @@ fs.writeFileSync(
     publishDir,
     "hashtags.txt"
   ),
-  script.content.tags
+  hashtags
     .map(tag => "#" + tag)
     .join("\n")
 );
