@@ -95,7 +95,7 @@ script.video.scenes[currentSceneIndex];
         frame={sceneFrame}
       />
 
-      <Subtitle text={scene.narration} />
+      <Subtitle />
       
       <div
         style={{

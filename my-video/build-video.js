@@ -1,6 +1,8 @@
 const logger = require("./lib/logger");
 
 const generateAudio = require("./lib/generate-audio");
+const generateSubtitles = require("./lib/generate-subtitles");
+
 const updateCurrent = require("./lib/update-current");
 const renderVideo = require("./lib/render-video");
 const validateScript = require("./lib/validate-script");
@@ -19,6 +21,8 @@ logger.log("Build", `Building ${episode}`);
 validateScript(script);
 
 generateAudio(script, episode);
+
+generateSubtitles(episode);
 
 updateCurrent(script, episode);
 

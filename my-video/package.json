@@ -25,6 +25,7 @@
 "build": "remotion bundle",
 "build-video": "node build-video.js",
 "upgrade": "remotion upgrade",
-"lint": "eslint src && tsc"
+"lint": "eslint src && tsc",
+"progress": "node scripts/update-progress.js"
 }
 }
