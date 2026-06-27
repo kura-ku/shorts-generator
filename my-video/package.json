@@ -26,6 +26,8 @@
 "build-video": "node build-video.js",
 "upgrade": "remotion upgrade",
 "lint": "eslint src && tsc",
-"progress": "node scripts/update-progress.js"
+"progress": "node scripts/update-progress.js",
+"new": "node lib/create-episode.js",
+"draft": "node lib/draft-episode.js"
 }
 }
