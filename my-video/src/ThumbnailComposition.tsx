@@ -43,7 +43,7 @@ export const ThumbnailComposition = () => {
             "6px 6px 12px rgba(0,0,0,.8)",
         }}
       >
-        {script.metadata.topic}
+        {script.content.topic}
       </div>
 
     </AbsoluteFill>

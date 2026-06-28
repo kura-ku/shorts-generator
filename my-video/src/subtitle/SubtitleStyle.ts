@@ -2,7 +2,7 @@ export const SubtitleStyle = {
 
   container: {
 
-    width: 860,
+    maxWidth: 860,
 
     textAlign: "center" as const,
 
@@ -11,6 +11,16 @@ export const SubtitleStyle = {
     fontWeight: "bold" as const,
 
     lineHeight: 1.25,
+
+    display: "flex",
+
+    flexWrap: "wrap" as const,
+
+    justifyContent: "center",
+
+    alignItems: "center",
+
+    gap: 8,
 
   },
 

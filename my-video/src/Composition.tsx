@@ -42,15 +42,30 @@ script.video.scenes[currentSceneIndex];
   const sceneFrame = frame - sceneStart;
 
   const zoom = interpolate(
-    sceneFrame,
-    [0, 120],
-    [1, 1.08],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-    }
+  sceneFrame,
+  [0, 90],
+  [1.00, 1.05],
+  {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  }
   );
 
+  const direction =
+  currentSceneIndex % 2 === 0
+    ? 1
+    : -1;
+
+  const translateX = interpolate(
+  sceneFrame,
+  [0, 90],
+  [0, direction * 18],
+  {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  }
+  );
+  
   return (
     <AbsoluteFill
       style={{
@@ -63,6 +78,11 @@ script.video.scenes[currentSceneIndex];
         src={staticFile(`audio/${script.audio.file}`)}
       />
 
+      {/* <Html5Audio
+        src={staticFile("bgm/main.mp3")}
+        volume={0.12}
+      /> */}
+      
       <Background
         background={scene.visual.background}
       />
@@ -78,12 +98,15 @@ script.video.scenes[currentSceneIndex];
           zIndex: 20,
         }}
       >
-        {script.metadata.topic}
+        {script.content.topic}
       </div>
 
       <div
         style={{
-          transform: `scale(${zoom})`,
+          transform: `
+          translateX(${translateX}px)
+          scale(${zoom})
+          `,
           zIndex: 10,
         }}
       >
