@@ -12,27 +12,15 @@ type Props = {
 export const Face: React.FC<Props> = ({
   expression,
 }) => {
-
   return (
-
     <g>
-
       <Head />
 
-      <Eyebrows
-        expression={expression}
-      />
+      <Eyebrows expression={expression} />
 
-      <Eyes
-        expression={expression}
-      />
+      <Eyes expression={expression} />
 
-      <Mouth
-        expression={expression}
-      />
-
+      <Mouth expression={expression} />
     </g>
-
   );
-
 };

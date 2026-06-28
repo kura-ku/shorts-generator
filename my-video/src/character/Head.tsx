@@ -5,20 +5,27 @@ type Props = {
 };
 
 export const Head: React.FC<Props> = ({
-  size = 44,
+  size = 48,
 }) => {
-
   return (
+    <>
+      {/* 影 */}
+      <circle
+        cx={2}
+        cy={3}
+        r={size}
+        fill="rgba(0,0,0,0.08)"
+      />
 
-    <circle
-      cx={0}
-      cy={0}
-      r={size}
-      fill="white"
-      stroke="black"
-      strokeWidth={4}
-    />
-
+      {/* 顔 */}
+      <circle
+        cx={0}
+        cy={0}
+        r={size}
+        fill="#ffffff"
+        stroke="#222"
+        strokeWidth={4}
+      />
+    </>
   );
-
 };

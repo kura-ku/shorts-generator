@@ -8,51 +8,48 @@ type Props = {
 export const Mouth: React.FC<Props> = ({
   expression = "neutral",
 }) => {
-
   const style = {
     stroke: "black",
     strokeWidth: 4,
     strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
     fill: "none",
   };
 
   switch (expression) {
-
     case "happy":
-
       return (
         <path
-          d="M-16 20 Q0 36 16 20"
+          d="M-18 18 Q0 40 18 18"
           {...style}
         />
       );
 
     case "sad":
-
       return (
         <path
-          d="M-16 30 Q0 16 16 30"
+          d="M-18 34 Q0 14 18 34"
           {...style}
         />
       );
 
     case "angry":
-
       return (
-        <path
-          d="M-12 24 L12 24"
-          {...style}
-        />
+        <g>
+          <path
+            d="M-14 24 L14 24"
+            {...style}
+          />
+        </g>
       );
 
     case "surprised":
-
       return (
         <ellipse
           cx={0}
           cy={24}
-          rx={8}
-          ry={10}
+          rx={9}
+          ry={12}
           fill="white"
           stroke="black"
           strokeWidth={4}
@@ -60,32 +57,27 @@ export const Mouth: React.FC<Props> = ({
       );
 
     case "thinking":
-
       return (
         <path
-          d="M-10 24 Q0 28 10 24"
+          d="M-12 24 Q0 30 12 24"
           {...style}
         />
       );
 
     case "closed":
-
       return (
         <path
-          d="M-10 24 L10 24"
+          d="M-12 24 L12 24"
           {...style}
         />
       );
 
     default:
-
       return (
         <path
-          d="M-8 24 Q0 28 8 24"
+          d="M-12 22 Q0 30 12 22"
           {...style}
         />
       );
-
   }
-
 };

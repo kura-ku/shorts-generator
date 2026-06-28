@@ -8,7 +8,6 @@ type Props = {
 export const Eyebrows: React.FC<Props> = ({
   expression = "neutral",
 }) => {
-
   const style = {
     stroke: "black",
     strokeWidth: 4,
@@ -16,37 +15,12 @@ export const Eyebrows: React.FC<Props> = ({
   };
 
   switch (expression) {
-
     case "happy":
-
       return (
         <g {...style}>
-
           <line
-            x1={-30}
+            x1={-32}
             y1={-30}
-            x2={-12}
-            y2={-26}
-          />
-
-          <line
-            x1={12}
-            y1={-26}
-            x2={30}
-            y2={-30}
-          />
-
-        </g>
-      );
-
-    case "sad":
-
-      return (
-        <g {...style}>
-
-          <line
-            x1={-30}
-            y1={-24}
             x2={-12}
             y2={-34}
           />
@@ -54,105 +28,108 @@ export const Eyebrows: React.FC<Props> = ({
           <line
             x1={12}
             y1={-34}
-            x2={30}
-            y2={-24}
+            x2={32}
+            y2={-30}
           />
-
         </g>
       );
 
-    case "angry":
-
+    case "sad":
       return (
         <g {...style}>
-
           <line
-            x1={-30}
-            y1={-22}
+            x1={-32}
+            y1={-28}
             x2={-12}
-            y2={-32}
+            y2={-38}
           />
 
           <line
             x1={12}
-            y1={-32}
-            x2={30}
-            y2={-22}
+            y1={-38}
+            x2={32}
+            y2={-28}
+          />
+        </g>
+      );
+
+    case "angry":
+      return (
+        <g {...style}>
+          <line
+            x1={-32}
+            y1={-22}
+            x2={-12}
+            y2={-34}
           />
 
+          <line
+            x1={12}
+            y1={-34}
+            x2={32}
+            y2={-22}
+          />
         </g>
       );
 
     case "surprised":
-
       return (
         <g {...style}>
-
           <line
-            x1={-30}
-            y1={-40}
-            x2={-10}
-            y2={-40}
+            x1={-32}
+            y1={-42}
+            x2={-12}
+            y2={-42}
           />
 
           <line
-            x1={10}
-            y1={-40}
-            x2={30}
-            y2={-40}
+            x1={12}
+            y1={-42}
+            x2={32}
+            y2={-42}
           />
-
         </g>
       );
 
     case "thinking":
-
       return (
         <g {...style}>
-
           <line
-            x1={-30}
+            x1={-32}
             y1={-30}
-            x2={-10}
+            x2={-12}
             y2={-30}
           />
 
           <line
             x1={12}
             y1={-36}
-            x2={30}
+            x2={32}
             y2={-28}
           />
-
         </g>
       );
 
     case "closed":
-
       return null;
 
     default:
-
       return (
         <g {...style}>
-
           <line
-            x1={-30}
-            y1={-28}
-            x2={-10}
-            y2={-28}
+            x1={-32}
+            y1={-30}
+            x2={-12}
+            y2={-30}
           />
 
           <line
-            x1={10}
-            y1={-28}
-            x2={30}
-            y2={-28}
+            x1={12}
+            y1={-30}
+            x2={32}
+            y2={-30}
           />
-
         </g>
       );
-
   }
-
 };

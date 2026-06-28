@@ -16,52 +16,28 @@ type Props = {
 export const Eyes: React.FC<Props> = ({
   expression = "neutral",
 }) => {
-
-  const eyeStyle = {
-    fill: "black",
-  };
-
   switch (expression) {
-
     case "happy":
-
       return (
         <g stroke="black" strokeWidth={4} fill="none">
-
-          <path
-            d="M-28 -8 Q-18 -18 -8 -8"
-          />
-
-          <path
-            d="M8 -8 Q18 -18 28 -8"
-          />
-
+          <path d="M-30 -8 Q-20 -20 -10 -8" />
+          <path d="M10 -8 Q20 -20 30 -8" />
         </g>
       );
 
     case "sad":
-
       return (
         <g stroke="black" strokeWidth={4} fill="none">
-
-          <path
-            d="M-28 -12 Q-18 -4 -8 -12"
-          />
-
-          <path
-            d="M8 -12 Q18 -4 28 -12"
-          />
-
+          <path d="M-30 -12 Q-20 -2 -10 -12" />
+          <path d="M10 -12 Q20 -2 30 -12" />
         </g>
       );
 
     case "angry":
-
       return (
         <g>
-
           <line
-            x1={-30}
+            x1={-32}
             y1={-18}
             x2={-12}
             y2={-8}
@@ -72,7 +48,7 @@ export const Eyes: React.FC<Props> = ({
           <line
             x1={12}
             y1={-8}
-            x2={30}
+            x2={32}
             y2={-18}
             stroke="black"
             strokeWidth={4}
@@ -80,30 +56,27 @@ export const Eyes: React.FC<Props> = ({
 
           <circle
             cx={-20}
-            cy={-6}
-            r={4}
-            {...eyeStyle}
+            cy={-7}
+            r={6}
+            fill="black"
           />
 
           <circle
             cx={20}
-            cy={-6}
-            r={4}
-            {...eyeStyle}
+            cy={-7}
+            r={6}
+            fill="black"
           />
-
         </g>
       );
 
     case "surprised":
-
       return (
         <g>
-
           <circle
             cx={-20}
             cy={-8}
-            r={7}
+            r={9}
             fill="white"
             stroke="black"
             strokeWidth={3}
@@ -112,7 +85,7 @@ export const Eyes: React.FC<Props> = ({
           <circle
             cx={20}
             cy={-8}
-            r={7}
+            r={9}
             fill="white"
             stroke="black"
             strokeWidth={3}
@@ -121,30 +94,41 @@ export const Eyes: React.FC<Props> = ({
           <circle
             cx={-20}
             cy={-8}
-            r={3}
+            r={5}
             fill="black"
           />
 
           <circle
             cx={20}
             cy={-8}
-            r={3}
+            r={5}
             fill="black"
           />
 
+          <circle
+            cx={-22}
+            cy={-10}
+            r={1.5}
+            fill="white"
+          />
+
+          <circle
+            cx={18}
+            cy={-10}
+            r={1.5}
+            fill="white"
+          />
         </g>
       );
 
     case "thinking":
-
       return (
         <g>
-
           <circle
             cx={-20}
             cy={-8}
-            r={4}
-            {...eyeStyle}
+            r={5}
+            fill="black"
           />
 
           <line
@@ -155,57 +139,77 @@ export const Eyes: React.FC<Props> = ({
             stroke="black"
             strokeWidth={4}
           />
-
         </g>
       );
 
     case "closed":
-
       return (
-        <g
-          stroke="black"
-          strokeWidth={4}
-        >
-
+        <g stroke="black" strokeWidth={4}>
           <line
-            x1={-28}
+            x1={-30}
             y1={-8}
-            x2={-12}
+            x2={-10}
             y2={-8}
           />
 
           <line
-            x1={12}
+            x1={10}
             y1={-8}
-            x2={28}
+            x2={30}
             y2={-8}
           />
-
         </g>
       );
 
     default:
-
       return (
         <g>
-
           <circle
             cx={-20}
             cy={-8}
-            r={5}
-            {...eyeStyle}
+            r={8}
+            fill="white"
+            stroke="black"
+            strokeWidth={3}
           />
 
           <circle
             cx={20}
             cy={-8}
-            r={5}
-            {...eyeStyle}
+            r={8}
+            fill="white"
+            stroke="black"
+            strokeWidth={3}
           />
 
+          <circle
+            cx={-20}
+            cy={-8}
+            r={4.5}
+            fill="black"
+          />
+
+          <circle
+            cx={20}
+            cy={-8}
+            r={4.5}
+            fill="black"
+          />
+
+          <circle
+            cx={-22}
+            cy={-10}
+            r={1.5}
+            fill="white"
+          />
+
+          <circle
+            cx={18}
+            cy={-10}
+            r={1.5}
+            fill="white"
+          />
         </g>
       );
-
   }
-
 };
