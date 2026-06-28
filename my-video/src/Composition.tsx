@@ -103,11 +103,11 @@ script.video.scenes[currentSceneIndex];
 
       <div
         style={{
-          transform: `
-          translateX(${translateX}px)
-          scale(${zoom})
-          `,
-          zIndex: 10,
+        transform: `
+        translateX(${translateX}px)
+        scale(${zoom * 2.6})
+        `,
+        zIndex: 10,
         }}
       >
         <NeoTony
