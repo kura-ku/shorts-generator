@@ -19,7 +19,7 @@ export const Arm: React.FC<Props> = ({
 
   const style = {
     stroke: "black",
-    strokeWidth: 4,
+    strokeWidth: 5,
     strokeLinecap: "round" as const,
     fill: "none",
   };
@@ -29,232 +29,208 @@ export const Arm: React.FC<Props> = ({
     case "point":
 
       return (
-
         <g {...style}>
 
+          {/* Left */}
           <line
-            x1={-24}
-            y1={72}
+            x1={-20}
+            y1={66}
             x2={-42}
             y2={108}
           />
 
-          <line
-            x1={-42}
-            y1={108}
-            x2={-36}
-            y2={148}
-          />
-
-          <line
-            x1={24}
-            y1={72}
-            x2={74}
-            y2={42}
-          />
-
-          <line
-            x1={74}
-            y1={42}
-            x2={108}
-            y2={42}
-          />
-
           <Hand
-            x={108}
-            y={42}
-            rotation={0}
-            pose="point"
-          />
-
-          <Hand
-            x={-36}
-            y={148}
+            x={-42}
+            y={108}
             pose="open"
           />
 
-        </g>
+          {/* Right */}
+          <line
+            x1={20}
+            y1={66}
+            x2={78}
+            y2={52}
+          />
 
+          <Hand
+            x={78}
+            y={52}
+            pose="point"
+            rotation={-10}
+          />
+
+        </g>
       );
 
     case "celebrate":
 
       return (
-
         <g {...style}>
 
           <line
-            x1={-24}
-            y1={72}
-            x2={-64}
-            y2={12}
+            x1={-20}
+            y1={66}
+            x2={-60}
+            y2={18}
           />
 
           <line
-            x1={24}
-            y1={72}
-            x2={64}
-            y2={12}
+            x1={20}
+            y1={66}
+            x2={60}
+            y2={18}
           />
 
           <Hand
-            x={-64}
-            y={12}
+            x={-60}
+            y={18}
             pose="fist"
           />
 
           <Hand
-            x={64}
-            y={12}
+            x={60}
+            y={18}
             pose="fist"
           />
 
         </g>
-
       );
 
     case "thinking":
 
       return (
-
         <g {...style}>
 
           <line
-            x1={-24}
-            y1={72}
-            x2={-40}
-            y2={118}
+            x1={-20}
+            y1={66}
+            x2={-38}
+            y2={110}
           />
 
           <line
-            x1={24}
-            y1={72}
+            x1={20}
+            y1={66}
             x2={18}
-            y2={20}
+            y2={12}
           />
 
           <Hand
             x={18}
-            y={20}
+            y={12}
             pose="thinking"
           />
 
           <Hand
-            x={-40}
-            y={118}
+            x={-38}
+            y={110}
             pose="open"
           />
 
         </g>
-
       );
 
     case "angry":
 
       return (
-
         <g {...style}>
 
           <line
-            x1={-24}
-            y1={72}
-            x2={-62}
-            y2={92}
+            x1={-20}
+            y1={66}
+            x2={-48}
+            y2={86}
           />
 
           <line
-            x1={24}
-            y1={72}
-            x2={62}
-            y2={92}
+            x1={20}
+            y1={66}
+            x2={48}
+            y2={86}
           />
 
           <Hand
-            x={-62}
-            y={92}
+            x={-48}
+            y={86}
             pose="fist"
           />
 
           <Hand
-            x={62}
-            y={92}
+            x={48}
+            y={86}
             pose="fist"
           />
 
         </g>
-
       );
 
     case "sad":
 
       return (
-
         <g {...style}>
 
           <line
-            x1={-24}
-            y1={72}
-            x2={-26}
-            y2={158}
+            x1={-20}
+            y1={66}
+            x2={-22}
+            y2={146}
           />
 
           <line
-            x1={24}
-            y1={72}
-            x2={26}
-            y2={158}
+            x1={20}
+            y1={66}
+            x2={22}
+            y2={146}
           />
 
           <Hand
-            x={-26}
-            y={158}
+            x={-22}
+            y={146}
             pose="open"
           />
 
           <Hand
-            x={26}
-            y={158}
+            x={22}
+            y={146}
             pose="open"
           />
 
         </g>
-
       );
 
     default:
 
       return (
-
         <g {...style}>
 
           <line
-            x1={-24}
-            y1={72}
+            x1={-20}
+            y1={66}
             x2={-42}
-            y2={112}
+            y2={106}
           />
 
           <line
-            x1={24}
-            y1={72}
+            x1={20}
+            y1={66}
             x2={42}
-            y2={112}
+            y2={106}
           />
 
           <Hand
             x={-42}
-            y={112}
+            y={106}
             pose="open"
           />
 
           <Hand
             x={42}
-            y={112}
+            y={106}
             pose="open"
           />
 
         </g>
-
       );
 
   }

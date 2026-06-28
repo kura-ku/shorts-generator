@@ -1,10 +1,16 @@
 import { useCurrentFrame } from "remotion";
+import { Face } from "./character/Face";
+import { EyeExpression } from "./character/Eyes";
 
 type Props = {
   animation: string;
+  expression?: EyeExpression;
 };
 
-export const NeoTony = ({ animation }: Props) => {
+export const NeoTony = ({
+    animation,
+    expression = "neutral",
+  }: Props) => {
   const frame = useCurrentFrame();
 
   const swing = Math.sin(frame * 0.15) * 25;
@@ -77,6 +83,21 @@ export const NeoTony = ({ animation }: Props) => {
           backgroundColor: "white",
         }}
       >
+      <div
+        style={{
+          position: "absolute",
+          top: 40,
+          left: 100,
+        }}
+      >
+      <svg
+        width="100"
+        height="100"
+        viewBox="-60 -60 120 120"
+      >
+        <Face expression={expression} />
+      </svg>
+      </div>
         {/* Left Glass */}
         <div
           style={{

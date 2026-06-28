@@ -20,129 +20,129 @@ export const Clothes: React.FC<Props> = ({
     case "hoodie":
 
       return (
-
         <g>
 
-          {/* フード */}
-
+          {/* Hood */}
           <path
             d="
-              M-30 56
-              Q0 36
-              30 56
+              M-22 56
+              Q0 34
+              22 56
             "
-            fill="#666666"
+            fill="#555555"
           />
 
-          {/* パーカー */}
-
+          {/* Body */}
           <rect
-            x={-24}
-            y={64}
-            width={48}
-            height={70}
-            rx={18}
+            x={-20}
+            y={60}
+            width={40}
+            height={50}
+            rx={14}
             fill="#777777"
           />
 
-          {/* 紐 */}
+          {/* Pocket */}
+          <path
+            d="
+              M-12 92
+              Q0 102
+              12 92
+            "
+            fill="none"
+            stroke="#666"
+            strokeWidth={2}
+          />
 
+          {/* Strings */}
           <line
-            x1={-6}
-            y1={68}
-            x2={-6}
-            y2={92}
+            x1={-5}
+            y1={60}
+            x2={-5}
+            y2={78}
             stroke="white"
             strokeWidth={2}
           />
 
           <line
-            x1={6}
-            y1={68}
-            x2={6}
-            y2={92}
+            x1={5}
+            y1={60}
+            x2={5}
+            y2={78}
             stroke="white"
             strokeWidth={2}
           />
 
         </g>
-
       );
 
     case "tshirt":
 
       return (
-
         <rect
-          x={-24}
-          y={64}
-          width={48}
-          height={70}
-          rx={16}
-          fill="#4A90E2"
+          x={-20}
+          y={60}
+          width={40}
+          height={50}
+          rx={12}
+          fill="#3B82F6"
         />
-
       );
 
     case "shirt":
 
       return (
-
         <g>
 
           <rect
-            x={-24}
-            y={64}
-            width={48}
-            height={70}
-            rx={16}
+            x={-20}
+            y={60}
+            width={40}
+            height={50}
+            rx={12}
             fill="white"
           />
 
           <line
             x1={0}
-            y1={64}
+            y1={60}
             x2={0}
-            y2={134}
-            stroke="#CCCCCC"
+            y2={110}
+            stroke="#BBBBBB"
             strokeWidth={2}
           />
 
         </g>
-
       );
 
     case "suit":
 
       return (
-
         <g>
 
           <rect
-            x={-24}
-            y={64}
-            width={48}
-            height={70}
-            rx={16}
+            x={-20}
+            y={60}
+            width={40}
+            height={50}
+            rx={12}
             fill="#202020"
           />
 
           <polygon
-            points="-8,64 0,86 8,64"
+            points="-8,60 0,76 8,60"
             fill="white"
           />
 
           <polygon
-            points="-2,86 2,86 0,110"
+            points="-2,76 2,76 0,100"
             fill="#C00000"
           />
 
         </g>
-
       );
 
     default:
-
       return null;
 
   }

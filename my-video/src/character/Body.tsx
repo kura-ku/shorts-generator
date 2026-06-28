@@ -8,51 +8,61 @@ type Props = {
 };
 
 export const Body: React.FC<Props> = ({
-  bodyColor = "#FFFFFF",
+  bodyColor = "#ffffff",
   lean = 0,
   clothes = "hoodie",
 }) => {
-
   return (
-
-    <g
-      transform={`rotate(${lean} 0 100)`}
-    >
+    <g transform={`rotate(${lean} 0 100)`}>
 
       {/* Neck */}
-
       <line
         x1={0}
-        y1={44}
+        y1={42}
         x2={0}
-        y2={60}
+        y2={58}
         stroke="black"
-        strokeWidth={4}
+        strokeWidth={5}
         strokeLinecap="round"
       />
 
-      {/* Base Body */}
-
-      <rect
-        x={-26}
-        y={60}
-        width={52}
-        height={78}
-        rx={22}
-        ry={22}
-        fill={bodyColor}
+      {/* Shoulder */}
+      <line
+        x1={-22}
+        y1={62}
+        x2={22}
+        y2={62}
         stroke="black"
-        strokeWidth={4}
+        strokeWidth={5}
+        strokeLinecap="round"
+      />
+
+      {/* Body */}
+      <line
+        x1={0}
+        y1={62}
+        x2={0}
+        y2={145}
+        stroke="black"
+        strokeWidth={5}
+        strokeLinecap="round"
       />
 
       {/* Clothes */}
+      <Clothes type={clothes} />
 
-      <Clothes
-        type={clothes}
+      {/* Tie */}
+      <path
+        d="
+          M0 66
+          L8 82
+          L0 118
+          L-8 82
+          Z
+        "
+        fill="#2563EB"
       />
 
     </g>
-
   );
-
 };
