@@ -7,13 +7,10 @@ import { Leg, LegPose } from "./Leg";
 export type PoseType =
   | "idle"
   | "point"
-  | "thinking"
   | "celebrate"
+  | "thinking"
   | "angry"
-  | "sad"
-  | "walk"
-  | "run"
-  | "jump";
+  | "sad";
 
 type Props = {
   pose?: PoseType;
@@ -23,75 +20,79 @@ export const PoseEngine: React.FC<Props> = ({
   pose = "idle",
 }) => {
 
-  let bodyLean = 0;
   let armPose: ArmPose = "idle";
   let legPose: LegPose = "idle";
+
+  let bodyLean = 0;
 
   switch (pose) {
 
     case "point":
-      bodyLean = -6;
-      armPose = "point";
-      legPose = "idle";
-      break;
 
-    case "thinking":
-      bodyLean = -8;
-      armPose = "thinking";
-      legPose = "idle";
+      armPose = "point";
+      legPose = "walk";
+      bodyLean = 8;
+
       break;
 
     case "celebrate":
-      bodyLean = 0;
+
       armPose = "celebrate";
       legPose = "jump";
+      bodyLean = 0;
+
+      break;
+
+    case "thinking":
+
+      armPose = "thinking";
+      legPose = "idle";
+      bodyLean = -6;
+
       break;
 
     case "angry":
-      bodyLean = 4;
+
       armPose = "angry";
-      legPose = "idle";
+      legPose = "walk";
+      bodyLean = 10;
+
       break;
 
     case "sad":
-      bodyLean = 10;
+
       armPose = "sad";
       legPose = "idle";
-      break;
-
-    case "walk":
-      bodyLean = -4;
-      armPose = "idle";
-      legPose = "walk";
-      break;
-
-    case "run":
       bodyLean = -12;
-      armPose = "point";
-      legPose = "run";
-      break;
 
-    case "jump":
-      bodyLean = 0;
-      armPose = "celebrate";
-      legPose = "jump";
       break;
 
     default:
-      bodyLean = 0;
+
       armPose = "idle";
       legPose = "idle";
+      bodyLean = 0;
 
   }
 
   return (
-    <>
-      <Body lean={bodyLean} />
 
-      <Arm pose={armPose} />
+    <g>
 
-      <Leg pose={legPose} />
-    </>
+      <Body
+        lean={bodyLean}
+      />
+
+      <Arm
+        pose={armPose}
+      />
+
+      <Leg
+        pose={legPose}
+      />
+
+    </g>
+
   );
 
 };

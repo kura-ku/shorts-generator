@@ -13,10 +13,10 @@ export const Body: React.FC<Props> = ({
   return (
 
     <g
-    transform={`rotate(${lean} 0 100)`}
+      transform={`rotate(${lean} 0 100)`}
     >
 
-      {/* 首 */}
+      {/* Neck */}
 
       <line
         x1={0}
@@ -28,7 +28,7 @@ export const Body: React.FC<Props> = ({
         strokeLinecap="round"
       />
 
-      {/* 胴体 */}
+      {/* Body */}
 
       <rect
         x={-26}
@@ -42,14 +42,14 @@ export const Body: React.FC<Props> = ({
         strokeWidth={4}
       />
 
-      {/* 胸ライン */}
+      {/* Chest */}
 
       <line
-        x1={-12}
-        y1={84}
-        x2={12}
-        y2={84}
-        stroke="#D8D8D8"
+        x1={-10}
+        y1={86}
+        x2={10}
+        y2={86}
+        stroke="#DADADA"
         strokeWidth={2}
       />
 
