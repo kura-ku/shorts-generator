@@ -7,7 +7,7 @@ import {
 } from "remotion";
 
 import script from "./data/current.json";
-import { NeoTony } from "./NeoTony";
+import { NeoTony } from "./character/NeoTony";
 import { SceneProps } from "./Props";
 import { Background } from "./Background";
 import { Subtitle } from "./subtitle/Subtitle";
@@ -110,7 +110,11 @@ script.video.scenes[currentSceneIndex];
           zIndex: 10,
         }}
       >
-        <NeoTony animation={scene.animation} />
+        <NeoTony
+          expression="neutral"
+          pose="idle"
+          animation="idle"
+        />
       </div>
 
       <SceneProps
