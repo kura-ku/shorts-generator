@@ -81,6 +81,7 @@ export const PoseEngine: React.FC<Props> = ({
 
       <Body
         lean={bodyLean}
+        clothes="hoodie"
       />
 
       <Arm

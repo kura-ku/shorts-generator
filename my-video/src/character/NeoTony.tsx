@@ -19,6 +19,12 @@ import {
 
 import { EyeHighlight } from "./EyeHighlight";
 import { Shadow } from "./Shadow";
+import { Accessory, AccessoryType } from "./Accessory";
+import { Hair, HairStyle } from "./Hair";
+import {
+  CharacterTheme,
+  getTheme,
+} from "./ThemeEngine";
 
 type Props = {
   expression?: EyeExpression;
@@ -38,6 +44,9 @@ type Props = {
   emotionLines?: EmotionLineType;
 
   cheek?: CheekType;
+  accessory?: AccessoryType;
+  theme?: CharacterTheme;
+  hair?: HairStyle;
 };
 
 export const NeoTony: React.FC<Props> = ({
@@ -47,12 +56,29 @@ export const NeoTony: React.FC<Props> = ({
   animation = "idle",
   emotionLines = "none",
   cheek = "none",
+  accessory = "none",
+  theme = "neoTony",
+  hair = "default"
 }) => {
 
   const shadowScale =
     animation === "jump"
       ? 0.6
       : 1;
+  const selectedTheme = getTheme(theme);
+
+  const finalExpression =
+    expression ?? selectedTheme.expression;
+
+  const finalAccessory =
+    accessory === "none"
+      ? selectedTheme.accessory
+      : accessory;
+
+  const finalHair =
+    hair === "default"
+      ? selectedTheme.hair
+      : hair;
 
   return (
 
@@ -71,9 +97,14 @@ export const NeoTony: React.FC<Props> = ({
       >
 
         <Face
-          expression={expression}
+          expression={finalExpression}
         />
-
+        <Hair
+          style={finalHair}
+        />
+        <Accessory
+          type={finalAccessory}
+        />
         <EyeHighlight />
 
         <Cheek

@@ -12,7 +12,9 @@ type Props = {
 export const Face: React.FC<Props> = ({
   expression,
 }) => {
+
   return (
+
     <g>
 
       <Head />
@@ -30,5 +32,7 @@ export const Face: React.FC<Props> = ({
       />
 
     </g>
+
   );
+
 };

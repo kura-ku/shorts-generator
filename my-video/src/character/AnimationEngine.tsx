@@ -1,65 +1,84 @@
 import React from "react";
-import { useCurrentFrame } from "remotion";
+import {
+  interpolate,
+  useCurrentFrame,
+} from "remotion";
+
+type AnimationType =
+  | "none"
+  | "idle"
+  | "walk"
+  | "run"
+  | "jump"
+  | "shake";
 
 type Props = {
+  animation?: AnimationType;
   children: React.ReactNode;
-  animation?:
-    | "none"
-    | "idle"
-    | "walk"
-    | "run"
-    | "jump"
-    | "shake";
 };
 
 export const AnimationEngine: React.FC<Props> = ({
-  children,
   animation = "none",
+  children,
 }) => {
 
   const frame = useCurrentFrame();
 
   let translateY = 0;
+  let translateX = 0;
   let rotate = 0;
   let scale = 1;
 
   switch (animation) {
 
     case "idle":
-      translateY =
-        Math.sin(frame / 12) * 2;
+
+      translateY = Math.sin(frame / 18) * 2;
+
       break;
 
     case "walk":
-      translateY =
-        Math.sin(frame / 4) * 4;
+
+      translateY = Math.sin(frame / 4) * 4;
+
+      rotate = Math.sin(frame / 6) * 2;
+
       break;
 
     case "run":
-      translateY =
-        Math.sin(frame / 2) * 8;
 
-      rotate =
-        Math.sin(frame / 3) * 4;
+      translateY = Math.sin(frame / 2.2) * 8;
+
+      rotate = Math.sin(frame / 3) * 5;
+
       break;
 
     case "jump":
 
-      translateY =
-        -Math.abs(
-          Math.sin(frame / 10)
-        ) * 30;
+      translateY = interpolate(
+        Math.sin(frame / 12),
+        [-1, 1],
+        [0, -26]
+      );
+
+      scale = interpolate(
+        Math.sin(frame / 12),
+        [-1, 1],
+        [1, 1.05]
+      );
 
       break;
 
     case "shake":
 
-      rotate =
-        Math.sin(frame) * 4;
+      translateX = Math.sin(frame * 0.9) * 6;
+
+      rotate = Math.sin(frame * 0.8) * 4;
 
       break;
 
     default:
+
       break;
 
   }
@@ -68,7 +87,7 @@ export const AnimationEngine: React.FC<Props> = ({
 
     <g
       transform={`
-        translate(0 ${translateY})
+        translate(${translateX} ${translateY})
         rotate(${rotate})
         scale(${scale})
       `}

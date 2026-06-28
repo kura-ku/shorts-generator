@@ -1,13 +1,16 @@
 import React from "react";
+import { Clothes, ClothesType } from "./Clothes";
 
 type Props = {
   bodyColor?: string;
   lean?: number;
+  clothes?: ClothesType;
 };
 
 export const Body: React.FC<Props> = ({
   bodyColor = "#FFFFFF",
   lean = 0,
+  clothes = "hoodie",
 }) => {
 
   return (
@@ -28,7 +31,7 @@ export const Body: React.FC<Props> = ({
         strokeLinecap="round"
       />
 
-      {/* Body */}
+      {/* Base Body */}
 
       <rect
         x={-26}
@@ -42,15 +45,10 @@ export const Body: React.FC<Props> = ({
         strokeWidth={4}
       />
 
-      {/* Chest */}
+      {/* Clothes */}
 
-      <line
-        x1={-10}
-        y1={86}
-        x2={10}
-        y2={86}
-        stroke="#DADADA"
-        strokeWidth={2}
+      <Clothes
+        type={clothes}
       />
 
     </g>
