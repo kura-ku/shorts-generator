@@ -2,14 +2,14 @@ import React from "react";
 import { EyeExpression } from "./Eyes";
 
 type Props = {
-  expression: EyeExpression;
+  expression?: EyeExpression;
 };
 
 export const Mouth: React.FC<Props> = ({
-  expression,
+  expression = "neutral",
 }) => {
 
-  const stroke = {
+  const style = {
     stroke: "black",
     strokeWidth: 4,
     strokeLinecap: "round" as const,
@@ -18,98 +18,71 @@ export const Mouth: React.FC<Props> = ({
 
   switch (expression) {
 
-    // 😊
     case "happy":
+
       return (
         <path
-          d="M -14 20 Q 0 34 14 20"
-          {...stroke}
+          d="M-16 20 Q0 36 16 20"
+          {...style}
         />
       );
 
-    // 😲
+    case "sad":
+
+      return (
+        <path
+          d="M-16 30 Q0 16 16 30"
+          {...style}
+        />
+      );
+
+    case "angry":
+
+      return (
+        <path
+          d="M-12 24 L12 24"
+          {...style}
+        />
+      );
+
     case "surprised":
+
       return (
         <ellipse
-          cx="0"
-          cy="22"
-          rx="7"
-          ry="10"
+          cx={0}
+          cy={24}
+          rx={8}
+          ry={10}
           fill="white"
           stroke="black"
-          strokeWidth="4"
+          strokeWidth={4}
         />
       );
 
-    // 😡
-    case "angry":
-      return (
-        <path
-          d="M -14 28 Q 0 18 14 28"
-          {...stroke}
-        />
-      );
-
-    // 🤔
     case "thinking":
-      return (
-        <>
-          <line
-            x1="-8"
-            y1="24"
-            x2="10"
-            y2="24"
-            stroke="black"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
 
-          <circle
-            cx="18"
-            cy="24"
-            r="2"
-            fill="black"
-          />
-        </>
-      );
-
-    // 😭
-    case "crying":
       return (
         <path
-          d="M -12 30 Q 0 16 12 30"
-          {...stroke}
+          d="M-10 24 Q0 28 10 24"
+          {...style}
         />
       );
 
-    // 😢
-    case "sad":
-      return (
-        <path
-          d="M -12 28 Q 0 18 12 28"
-          {...stroke}
-        />
-      );
+    case "closed":
 
-    // 😎
-    case "confident":
       return (
         <path
-          d="M -12 22 Q 0 26 12 22"
-          {...stroke}
+          d="M-10 24 L10 24"
+          {...style}
         />
       );
 
     default:
+
       return (
-        <line
-          x1="-8"
-          y1="24"
-          x2="8"
-          y2="24"
-          stroke="black"
-          strokeWidth="4"
-          strokeLinecap="round"
+        <path
+          d="M-8 24 Q0 28 8 24"
+          {...style}
         />
       );
 

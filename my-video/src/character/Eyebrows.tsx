@@ -2,169 +2,157 @@ import React from "react";
 import { EyeExpression } from "./Eyes";
 
 type Props = {
-  expression: EyeExpression;
+  expression?: EyeExpression;
 };
 
 export const Eyebrows: React.FC<Props> = ({
-  expression,
+  expression = "neutral",
 }) => {
-  const stroke = {
+
+  const style = {
     stroke: "black",
     strokeWidth: 4,
     strokeLinecap: "round" as const,
   };
 
   switch (expression) {
+
     case "happy":
+
       return (
-        <g {...stroke}>
+        <g {...style}>
+
           <line
-            x1="-24"
-            y1="-18"
-            x2="-10"
-            y2="-16"
+            x1={-30}
+            y1={-30}
+            x2={-12}
+            y2={-26}
           />
 
           <line
-            x1="10"
-            y1="-16"
-            x2="24"
-            y2="-18"
-          />
-        </g>
-      );
-
-    case "surprised":
-      return (
-        <g {...stroke}>
-          <line
-            x1="-24"
-            y1="-24"
-            x2="-10"
-            y2="-24"
+            x1={12}
+            y1={-26}
+            x2={30}
+            y2={-30}
           />
 
-          <line
-            x1="10"
-            y1="-24"
-            x2="24"
-            y2="-24"
-          />
-        </g>
-      );
-
-    case "angry":
-      return (
-        <g {...stroke}>
-          <line
-            x1="-26"
-            y1="-18"
-            x2="-10"
-            y2="-10"
-          />
-
-          <line
-            x1="10"
-            y1="-10"
-            x2="26"
-            y2="-18"
-          />
-        </g>
-      );
-
-    case "thinking":
-      return (
-        <g {...stroke}>
-          <line
-            x1="-24"
-            y1="-18"
-            x2="-10"
-            y2="-18"
-          />
-
-          <line
-            x1="10"
-            y1="-14"
-            x2="26"
-            y2="-20"
-          />
         </g>
       );
 
     case "sad":
+
       return (
-        <g {...stroke}>
+        <g {...style}>
+
           <line
-            x1="-24"
-            y1="-14"
-            x2="-10"
-            y2="-18"
+            x1={-30}
+            y1={-24}
+            x2={-12}
+            y2={-34}
           />
 
           <line
-            x1="10"
-            y1="-18"
-            x2="24"
-            y2="-14"
+            x1={12}
+            y1={-34}
+            x2={30}
+            y2={-24}
           />
+
         </g>
       );
 
-    case "crying":
+    case "angry":
+
       return (
-        <g {...stroke}>
+        <g {...style}>
+
           <line
-            x1="-24"
-            y1="-14"
-            x2="-10"
-            y2="-20"
+            x1={-30}
+            y1={-22}
+            x2={-12}
+            y2={-32}
           />
 
           <line
-            x1="10"
-            y1="-20"
-            x2="24"
-            y2="-14"
+            x1={12}
+            y1={-32}
+            x2={30}
+            y2={-22}
           />
+
         </g>
       );
 
-    case "confident":
+    case "surprised":
+
       return (
-        <g {...stroke}>
+        <g {...style}>
+
           <line
-            x1="-24"
-            y1="-18"
-            x2="-10"
-            y2="-16"
+            x1={-30}
+            y1={-40}
+            x2={-10}
+            y2={-40}
           />
 
           <line
-            x1="10"
-            y1="-16"
-            x2="24"
-            y2="-18"
+            x1={10}
+            y1={-40}
+            x2={30}
+            y2={-40}
           />
+
         </g>
       );
+
+    case "thinking":
+
+      return (
+        <g {...style}>
+
+          <line
+            x1={-30}
+            y1={-30}
+            x2={-10}
+            y2={-30}
+          />
+
+          <line
+            x1={12}
+            y1={-36}
+            x2={30}
+            y2={-28}
+          />
+
+        </g>
+      );
+
+    case "closed":
+
+      return null;
 
     default:
+
       return (
-        <g {...stroke}>
+        <g {...style}>
+
           <line
-            x1="-24"
-            y1="-18"
-            x2="-10"
-            y2="-18"
+            x1={-30}
+            y1={-28}
+            x2={-10}
+            y2={-28}
           />
 
           <line
-            x1="10"
-            y1="-18"
-            x2="24"
-            y2="-18"
+            x1={10}
+            y1={-28}
+            x2={30}
+            y2={-28}
           />
+
         </g>
       );
+
   }
+
 };
